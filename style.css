@@ -298,6 +298,9 @@ main{
     .main-header {
         margin-bottom: 20%;
     }
+    #rules-container {
+        width: auto;
+    }
 }
 @media (min-height:650px) {
     .img-container{
