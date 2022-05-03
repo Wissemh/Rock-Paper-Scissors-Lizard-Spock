@@ -1,0 +1,307 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+body {
+    background-image: linear-gradient(to bottom,hsl(214, 47%, 23%) , hsl(237, 49%, 15%));
+    display: flex;
+    min-height: 100vh;
+    /* overflow: hidden;  */
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#rule-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+}
+.overlay
+{
+    background: rgba(0, 0, 0, 0.5); 
+    color: #f1f1f1;
+    transition: .5s ease;
+    opacity:0.5;
+}
+#rules-button {
+    all: unset;
+    position: absolute;
+    top: 91%;
+    right: 4%;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 14vh;
+    height: 4vh;
+    text-align: center;
+    cursor: pointer; 
+}
+#rules-container {
+    background-color: white;
+    position: absolute;
+    z-index: 100;
+    display: none;
+    text-align: center;
+    top: 10%;
+    width: 48%;
+    padding: 4%;
+    border-radius: 5px;
+}
+#rules-container > header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -10%;
+}
+#rules-container > header > h1 {
+    color: hsl(349, 71%, 52%);
+}
+#rules-container > header > span {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 30px;
+    color: #80808073;
+}
+#rules-container > header > span:hover{
+    color: black;
+}
+.score {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 7px;
+    text-align: center;
+    width: 20%;
+}
+h4 {
+    letter-spacing: 4px;
+    color: hsl(229, 64%, 46%);
+    margin: 0;
+}
+.score-value {
+    font-weight: bold;
+    font-size: 50px;
+    color: hsl(349, 71%, 52%);
+}
+.main-header{
+    height: 8em;
+    border: 3px solid hsl(217, 16%, 45%);
+    border-radius: 7px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1.5%;
+    margin-top: -6%;
+    margin-bottom: 4%;
+}
+main{
+    background-image: url("images/bg-pentagon.svg") ;
+    background-repeat: no-repeat;
+    background-position: center 25% ;
+    background-position-x: center;
+    width: 50em;
+}
+.img-container {
+    background-color: white;
+    width: 20vh;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 13px solid ;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.img-container > img {
+    width: 60%;
+}
+#scissors-container {
+    border-color: hsl(40, 84%, 53%) ; 
+    margin-left: 21em;
+}
+#element-scissorsp {
+    border-color: hsl(40, 84%, 53%) ; 
+    width: 12em;
+    height: 12em;
+    display: none;
+    
+}
+#element-scissorsc {
+    border-color: hsl(40, 84%, 53%) ; 
+    width: 12em;
+    height: 12em;
+    display: none;  
+}
+#spock-container {
+    border-color: hsl(189, 59%, 53%) ;
+    margin-left: 11em;
+    margin-top: -3em;
+}
+#element-spockp {
+    border-color: hsl(189, 59%, 53%) ;
+    width: 12em;
+    height: 12em;
+    display: none;
+} 
+#element-spockc {
+    border-color: hsl(189, 59%, 53%) ;
+    width: 12em;
+    height: 12em;
+    display: none;
+} 
+#lizard-container {
+    border-color: hsl(261, 73%, 60%)  ; 
+    margin-left: 14em;
+    margin-top: 4em;
+}
+#element-lizardp {
+    border-color: hsl(261, 73%, 60%)  ; 
+    display: none;
+    width: 12em;
+    height: 12em;
+} 
+#element-lizardc {
+    border-color: hsl(261, 73%, 60%)  ; 
+    display: none;
+    width: 12em;
+    height: 12em;
+} 
+#rock-container {
+    border-color: hsl(349, 71%, 52%)  ; 
+    float: right;
+    margin-top: -8em;
+    margin-right: 15em;
+}
+#element-rockc {
+    border-color: hsl(349, 71%, 52%)  ; 
+    display: none;
+    width: 12em;
+    height: 12em;
+} 
+#element-rockp {
+    border-color: hsl(349, 71%, 52%)  ; 
+    display: none;
+    width: 12em;
+    height: 12em;
+} 
+#paper-container {
+    border-color: hsl(230, 89%, 65%); 
+    float: right;
+    margin-top: -18em;
+    margin-right: 11em;
+}
+#element-paperp {
+
+    border-color: hsl(230, 89%, 65%); 
+    display: none;
+    width: 12em;
+    height: 12em;
+} 
+
+#element-paperc {
+
+    border-color: hsl(230, 89%, 65%); 
+    display: none;
+    width: 12em;
+    height: 12em;
+} 
+#stepTwo {
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+    display: none;
+}
+.play-com {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+.play-com > h3 {
+    margin-bottom: 28%;
+
+}
+.result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    display: none;
+}
+.result > h1 {
+    color: white;
+    font-size: 40px;
+}
+.result > button {
+    all: unset;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    color: hsl(349, 71%, 52%);
+    font-weight: 600;
+    height: 45px;
+    border-radius: 7px;
+    margin-top: -20%;
+    cursor: pointer;
+}
+
+#cercle
+{
+    height: 12em;
+    width: 12em;
+    border-radius: 50%;
+    background-color:  hsl(214, 47%, 23%) ;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+.Restart {
+    cursor: pointer;
+}
+
+@media (max-width:560px) {
+    body {
+        justify-content: flex-start;
+        padding: 10% 0;
+
+    }
+    #element-paperc,#element-rockc,#element-spockc,#element-lizardc,#element-scissorsc,
+    #element-paperp,#element-rockp,#element-spockp,#element-lizardp,#element-scissorsp,#cercle {
+        width: 8em;
+        height: 8em;
+    }
+    #rules-button {
+        right: inherit;
+    }
+    #rule-overlay {
+        width:100%;
+    }
+    #stepTwo {
+        position: relative;
+        justify-content: space-around;
+    }
+    #result-winning,#result-losing {
+        position: absolute;
+        top: 100%;
+    }
+    .img-container {
+        height: 8em;
+        width: 8em;
+    }
+    #stepOne {
+        transform: scale(0.85);
+    }
+    .main-header {
+        margin-bottom: 20%;
+    }
+}
+@media (min-height:650px) {
+    .img-container{
+        width: 13vh;
+        height: 13vh;
+    }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
+
+
+  <title>Frontend Mentor | Rock, Paper, Scissors, Lizard, Spock</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body >
+  <div id="rules-container">
+    <header>
+      <h1>RULES</h1>
+      <span id="hide-rules">x</span>
+    </header>
+    <img src="images/image-rules-bonus.svg" alt="Rules">
+  </div>
+  <div id="rule-overlay" >
+    <header class = "main-header">
+      <img src="images/logo-bonus.svg" alt="logo">
+      <section class="score">
+        <h4>SCORE</h4>
+       <span class="score-value" id="up-score">0</span>
+       </section>
+    </header>
+    <div id="stepOne">
+      <main>
+       <div class="img-container" id="scissors-container"><img src="images/icon-scissors.svg" alt="Scissors"></div>
+        <div class="img-container"  id="spock-container">  <img src="images/icon-spock.svg" alt="spock"></div>
+        <div class="img-container"  id="lizard-container">  <img src="images/icon-lizard.svg" alt="lizard"></div>
+        <div class="img-container"  id="rock-container">  <img src="images/icon-rock.svg" alt="rock"></div>
+        <div class="img-container"  id="paper-container">  <img src="images/icon-paper.svg" alt="paper"></div>
+      </main>
+    </div> 
+   <div id="stepTwo">
+    <section id="player-section" class="play-com">
+      <h3>YOU PICKED</h3>
+      <div>
+        <div class="img-container" id="element-scissorsp" ><img src="images/icon-scissors.svg" alt="Scissors"></div>
+        <div class="img-container"  id="element-spockp">  <img src="images/icon-spock.svg" alt="spock"></div>
+        <div class="img-container"  id="element-lizardp">  <img src="images/icon-lizard.svg" alt="lizard"></div>
+        <div class="img-container"  id="element-rockp">  <img src="images/icon-rock.svg" alt="rock"></div>
+        <div class="img-container"  id="element-paperp">  <img src="images/icon-paper.svg" alt="paper"></div>
+      </div>
+    </section>
+    <section class="result" id="result-losing">
+      <h1>YOU LOSE</h1>
+      <button class="Restart" id="Restart-losing">PLAY AGAIN</button>
+    </section>
+    <section class="result" id="result-winning">
+      <h1>YOU WIN</h1>
+      <button class="Restart" id="Restart-winning">PLAY AGAIN</button>
+    </section>
+    <section id = "computer-section" class="play-com">
+      <h3>THE HOUSE PICKED</h3>
+      <div>
+        <div class="img-container" id="element-scissorsc" ><img src="images/icon-scissors.svg" alt="Scissors"></div>
+        <div class="img-container"  id="element-spockc">  <img src="images/icon-spock.svg" alt="spock"></div>
+        <div class="img-container"  id="element-lizardc">  <img src="images/icon-lizard.svg" alt="lizard"></div>
+        <div class="img-container"  id="element-rockc">  <img src="images/icon-rock.svg" alt="rock"></div>
+        <div class="img-container"  id="element-paperc">  <img src="images/icon-paper.svg" alt="paper"></div>
+        <div  id="cercle">  </div>
+
+      </div>
+    </section>
+  </div>
+  <button id="rules-button">Rules</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
